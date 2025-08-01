@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تحميل الفيديوهات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شريط علوي -->
+    <header>
+        <button id="jamalBtn">Jamal</button>
+        <h1>موقع تحميل الفيديوهات</h1>
+        <button id="devBtn">المطور</button>
+    </header>
+
+    <!-- الأزرار الرئيسية -->
+    <main>
+        <button class="main-btn" id="aboutBtn">من نحن</button>
+        <button class="main-btn" id="reportBtn">إبلاغ عن مشكلة</button>
+        <button class="main-btn" id="settingsBtn">الإعدادات</button>
+    </main>
+
+    <!-- نافذة من نحن -->
+    <div class="popup" id="aboutPopup">
+        <div class="popup-content">
+            <h2>من نحن</h2>
+            <p>المطور: جمال 03</p>
+            <p>البريد: jmalslaia2000@gmail.com</p>
+            <p>الهاتف: +445687322065</p>
+            <p>بعض المعلومات الإضافية عن الموقع...</p>
+            <button onclick="closePopup('aboutPopup')">إغلاق</button>
+        </div>
+    </div>
+
+    <!-- نافذة الإبلاغ -->
+    <div class="popup" id="reportPopup">
+        <div class="popup-content">
+            <h2>إبلاغ عن مشكلة</h2>
+            <textarea placeholder="اكتب مشكلتك هنا"></textarea>
+            <p>أو تواصل عبر البريد: jmalslaia2000@gmail.com</p>
+            <button onclick="closePopup('reportPopup')">إغلاق</button>
+        </div>
+    </div>
+
+    <!-- نافذة الإعدادات -->
+    <div class="popup" id="settingsPopup">
+        <div class="popup-content">
+            <h2>الإعدادات</h2>
+            <button onclick="toggleDarkMode()">تفعيل الوضع المظلم</button>
+            <button onclick="closePopup('settingsPopup')">إغلاق</button>
+        </div>
+    </div>
+
+    <!-- نافذة الأكواد السرية -->
+    <div class="popup" id="codePopup">
+        <div class="popup-content">
+            <h2>أدخل الكود</h2>
+            <input type="password" id="secretCode" placeholder="أدخل الكود هنا">
+            <button onclick="checkCode()">تأكيد</button>
+            <button onclick="closePopup('codePopup')">إلغاء</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
